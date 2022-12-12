@@ -6,6 +6,7 @@
       
 <html>
   <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -57,13 +58,23 @@
     <tr>
       <td class="td4">select course:</td>
       <td>  
-         <select type="checkbox" name="course" multiple aria-label="close">
       
-        <option type="checkbox" name="course" value="PHP">PHP</option>
-        <option type="checkbox" name="course" value="JS">JS</option>
-        <option type="checkbox" name="course" value="MYSQL">MYSQL</option>
-        <option type="checkbox" name="course" value="HTML">HTML</option>
-      </select>
+  <div class="form-check form-switch">
+  <input name= "php" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">php</label>
+</div>
+<div class="form-check form-switch">
+  <input name= "html"   class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+  <label class="form-check-label" for="flexSwitchCheckChecked">html</label>
+</div>
+<div class="form-check form-switch">
+  <input  placeholder="123-45-678" name= "MYSQL"  class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">MYSQL</label>
+</div>
+<div class="form-check form-switch">
+  <input name= "JS"  class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+  <label class="form-check-label" for="flexSwitchCheckChecked">JS</label>
+</div>
     </tr>
     
 
@@ -89,9 +100,7 @@
 #
    if( isset( $_POST["Your_name"]) && isset( $_POST["E-Mail_ID"] )&& isset ($_POST["group"]) && isset( $_POST["Class_deatails"]) &&  isset ($_POST["Gender"]) && isset( $_POST["course"] ) )
     {
-      if (preg_match("/[^A-Za-z]/",$_POST["Your_name"] )) {
-         die ("invalid name and name should be alpha");
-      }
+      
       echo "Your name is  ". $_POST['Your_name']. "<br/>";
       echo "Your E-mail is ". $_POST['E-Mail_ID']. "<br/>";
       echo "Your group is ". $_POST['group']. "<br/>";
