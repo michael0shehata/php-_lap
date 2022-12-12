@@ -56,12 +56,13 @@
 
     <tr>
       <td class="td4">select course:</td>
-      <td>   <select type="checkbox" name="course" multiple aria-label="multiple select example">
+      <td>  
+         <select type="checkbox" name="course" multiple aria-label="close">
       
-        <option value="PHP">PHP</option>
-        <option value="JS">JS</option>
-        <option value="MYSQL">MYSQL</option>
-        <option value="HTML">HTML</option>
+        <option type="checkbox" name="course" value="PHP">PHP</option>
+        <option type="checkbox" name="course" value="JS">JS</option>
+        <option type="checkbox" name="course" value="MYSQL">MYSQL</option>
+        <option type="checkbox" name="course" value="HTML">HTML</option>
       </select>
     </tr>
     
